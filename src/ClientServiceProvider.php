@@ -31,7 +31,9 @@ class ClientServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('client.manager', ClientManager::class);
+        $this->app->singleton('client.manager', function () {
+            return new ClientManager($this->app);
+        });
     }
 
     /**

@@ -97,6 +97,6 @@ class ClientManager
      */
     public function __call($method, $parameters)
     {
-        return $this->current->{$method}(...$parameters);
+        return $this->current()->{$method}(...$parameters);
     }
 }
