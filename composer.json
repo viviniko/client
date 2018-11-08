@@ -1,0 +1,37 @@
+{
+    "name": "viviniko/client",
+    "description": "VIVINIKO Client Service Provider",
+	"keywords": ["viviniko", "client", "laravel"],
+	"homepage": "http://viviniko.com",
+	"license": "MIT",
+	"authors": [
+        {
+            "name": "viviniko",
+            "email": "viviniko.shop@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/http": "~5.0",
+        "illuminate/support": "~5.0",
+        "torann/geoip": "^1.0",
+        "jenssegers/agent": "^2.6"
+    },
+    "autoload": {
+        "psr-0": {
+            "Viviniko\\Client": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Viviniko\\Client\\ClientServiceProvider"
+            ],
+            "aliases": {
+                "Client": "Viviniko\\Client\\Facades\\Client"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
